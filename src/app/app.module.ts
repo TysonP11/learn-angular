@@ -8,6 +8,7 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { ServersComponent } from './servers/servers.component';
 import { WarningSuccessComponent } from './warning-success/warning-success.component';
+import { UsernameComponent } from './username/username.component';
 
 @NgModule({
   declarations: [
@@ -15,12 +16,12 @@ import { WarningSuccessComponent } from './warning-success/warning-success.compo
     ServerComponent,
     ServersComponent,
     WarningAlertComponent,
-    WarningSuccessComponent
+    WarningSuccessComponent,
+    UsernameComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule
-    
+    FormsModule    
   ],
   providers: [],
   bootstrap: [AppComponent]
