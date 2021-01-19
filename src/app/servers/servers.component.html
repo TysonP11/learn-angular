@@ -1,6 +1,7 @@
 <!-- <app-warning-success></app-warning-success>
 <hr>
 <app-warning-alert></app-warning-alert> -->
+
 <input type="text"
     class="form-control"
     [(ngModel)]="serverName"
@@ -9,4 +10,9 @@
 <button class="btn btn-primary" 
     [disabled]="!allowNewServer"
     (click)="onCreateServer()">Add Server</button>
-<p>{{ serverCreationStatus }}</p>
+<!-- <p>{{ serverCreationStatus }}</p> -->
+<p *ngIf="serverCreated;else noServer">Server was created, server name is {{ serverName }}</p>
+<ng-template #noServer>
+    <p>No Server was created</p>
+</ng-template>
+<app-server *ngFor="let server of servers"></app-server>
