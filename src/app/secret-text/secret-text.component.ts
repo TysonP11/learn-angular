@@ -23,5 +23,4 @@ export class SecretTextComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
 }
