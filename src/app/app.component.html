@@ -1,0 +1,32 @@
+<div class="container">
+  <!-- <app-cockpit
+    (serverCreated)="onServerAdded($event)"
+    (bluePrintCreated)="onBluePrintAdded($event)"
+  ></app-cockpit>
+  <hr>
+  <div class="row">
+    <div class="col-xs-12">
+      <button class="btn btn-primary" (click)="onChangeFirst()">Change 1st Element</button>
+      <app-server-element 
+        *ngFor="let serverElement of serverElements" [element]="serverElement"
+        [name]="serverElement.name"
+      >
+        <p>
+          <strong *ngIf="serverElement.type === 'server'" style="color: red">{{ serverElement.content }}</strong>
+          <em *ngIf="serverElement.type === 'blueprint'" style="color: blue">{{ serverElement.content }}</em>
+        </p>
+      </app-server-element>
+    </div>
+  </div> -->
+  <div class="rol">
+    <div class="col-xd-12">
+      <app-game-control (intervalFired)="onIntervalFired($event)"></app-game-control>
+    </div>
+  </div>
+  <div class="rol">
+    <div class="col-xd-12">
+      <app-odd *ngFor="let number of oddNumber" [number]="number"></app-odd>
+      <app-even *ngFor="let number of evenNumber" [number]="number"></app-even>
+    </div>
+  </div>
+</div>
