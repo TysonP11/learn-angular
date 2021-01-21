@@ -1,0 +1,14 @@
+import { NumberSymbol } from '@angular/common';
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
+})
+export class AppComponent {
+  oddNumbers = [1, 3, 5];
+  onlyOdd = false;
+  evenNumbers = [2, 4, 6];
+  value = 10
+}
