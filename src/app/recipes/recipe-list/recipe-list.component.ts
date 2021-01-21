@@ -1,5 +1,5 @@
 import { Recipe } from './../recipe.model';
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-recipe-list',
@@ -8,16 +8,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RecipeListComponent implements OnInit {
 
+  @Output() recipeWasSelected = new EventEmitter<Recipe>()
+
   recipes: Recipe[] = [
     new Recipe('A test recipe', 
     'this is a test',
     'https://images.immediate.co.uk/production/volatile/sites/30/2020/08/chorizo-mozarella-gnocchi-bake-cropped-9ab73a3.jpg?quality=90&resize=960,872'
     ),
-    new Recipe('A test recipe', 
+    new Recipe('Another test recipe', 
     'this is a test',
     'https://images.immediate.co.uk/production/volatile/sites/30/2020/08/chorizo-mozarella-gnocchi-bake-cropped-9ab73a3.jpg?quality=90&resize=960,872'
     )
   ]
+
+  afterRecipeClicked(recipe: Recipe) {
+    this.recipeWasSelected.emit(recipe)
+  }
 
   constructor() { }
 
